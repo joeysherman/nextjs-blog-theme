@@ -3,7 +3,7 @@ import { getPosts } from '../utils/mdx-utils';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 
 function Testimonial() {
   return (
