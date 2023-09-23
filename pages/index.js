@@ -1,15 +1,9 @@
-import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
-import Header from '../components/Header';
-import Layout, { GradientBackground } from '../components/Layout';
-import ArrowIcon from '../components/ArrowIcon';
-import { getGlobalData } from '../utils/global-data';
-import SEO from '../components/SEO';
-import Navbar from '../components/Navbar';
-import Image from 'next/image';
 import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
+import { getGlobalData } from '../utils/global-data';
+import Footer from '../components/footer';
 
 function Testimonial() {
   return (
