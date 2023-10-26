@@ -4,27 +4,70 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
+function Services() {
+  return (
+    <div className=" bg-gray-800">
+      <section className="container py-24 mx-auto md:px-6">
+        <div className="flex flex-wrap">
+          <div className="flex items-center justify-center content-center w-full shrink-0 grow-0 basis-auto md:w-2/12 lg:w-3/12">
+            <h3 className="text-3xl text-white font-semibold">Services</h3>
+          </div>
+          <div className="flex w-full shrink-0 grow-0 basis-auto text-center md:w-10/12 md:pl-6 md:text-left lg:w-9/12">
+            <div className="flex w-1/4 flex-col justify-center items-center">
+              <div className="mb-4">
+                <Image width="100px" height="100px" src="/scissors.png" />
+              </div>
+              <p className="text-xl font-bold text-white">Haircut</p>
+            </div>
+            <div className="flex w-1/4 flex-col justify-center items-center">
+              <div className="mb-4">
+                <Image width="100px" height="100px" src="/shaver.png" />
+              </div>
+              <p className="text-xl font-bold text-white">Shave</p>
+            </div>
+            <div className="flex w-1/4 flex-col justify-center items-center">
+              <div className="mb-4">
+                <Image width="100px" height="100px" src="/beard.png" />
+              </div>
+              <p className="text-xl font-bold text-white">Beard Style</p>
+            </div>
+
+            <div className="flex w-1/4 flex-col justify-center items-center">
+              <div className="mb-4">
+                <Image width="100px" height="100px" src="/full-cut.png" />
+              </div>
+              <p className="text-xl font-bold text-white">Hair Style</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
 function Testimonial() {
   return (
-    <div class="container my-24 mx-auto md:px-6">
-      <section class="mb-32">
-        <div class="flex flex-wrap">
-          <div class="w-full shrink-0 grow-0 basis-auto md:w-2/12 lg:w-3/12">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).jpg"
-              class="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
-              alt="Avatar"
+    <div className="container my-24 mx-auto md:px-6">
+      <section className="mb-32">
+        <div className="flex flex-wrap">
+          <div className="w-full shrink-0 grow-0 basis-auto md:w-2/12 lg:w-3/12">
+            <Image
+              width={1}
+              height={1}
+              layout="responsive"
+              className="mb-6 rounded-lg shadow-lg dark:shadow-black/20"
+              src="/bibi-drew.jpeg"
             />
           </div>
 
-          <div class="w-full shrink-0 grow-0 basis-auto text-center md:w-10/12 md:pl-6 md:text-left lg:w-9/12">
-            <h5 class="mb-6 text-xl font-semibold">Anna Maria Doe</h5>
-            <ul class="list-inside mb-6 flex justify-center space-x-4 md:justify-start">
+          <div className="w-full shrink-0 grow-0 basis-auto text-center md:w-10/12 md:pl-6 md:text-left lg:w-9/12">
+            <h5 className="mb-6 text-xl font-semibold">Anna Maria Doe</h5>
+            <ul className="list-inside mb-6 flex justify-center space-x-4 md:justify-start">
               <a href="#!">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -35,7 +78,7 @@ function Testimonial() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  class="h-4 w-4"
+                  className="h-4 w-4"
                 >
                   <path
                     fill="currentColor"
@@ -47,7 +90,7 @@ function Testimonial() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  class="h-3.5 w-3.5"
+                  className="h-3.5 w-3.5"
                 >
                   <path
                     fill="currentColor"
@@ -76,6 +119,7 @@ export default function Index({ posts, globalData }) {
       <main>
         <Hero />
         <Testimonial />
+        <Services />
       </main>
       <Footer />
     </Layout>
